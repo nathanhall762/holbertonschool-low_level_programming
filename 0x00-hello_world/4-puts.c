@@ -1,7 +1,7 @@
 # include <stdio.h>
 # include <string.h>
 
-/*Sends 'Programming is like building a multilingual puzzle' to standard output.*/
+/*Sends text to standard output.*/
 
 int main(void)
 {

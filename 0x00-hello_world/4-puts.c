@@ -1,6 +1,8 @@
 # include <stdio.h>
 # include <string.h>
 
+/*Sends 'Programming is like building a multilingual puzzle' to standard output.*/
+
 int main(void)
 {
 	char str1[54];

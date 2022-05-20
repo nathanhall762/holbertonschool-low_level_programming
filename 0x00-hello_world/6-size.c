@@ -2,16 +2,11 @@
 # include <string.h>
 
 /**
- * main
+ * main - main
  *
- * sizeof
+ * sizeof - gets size in bytes of type
  *
  * Return: Always 0 (Success)
- */
-
-/**
- * sizeof
- *
  */
 
 int main(void)

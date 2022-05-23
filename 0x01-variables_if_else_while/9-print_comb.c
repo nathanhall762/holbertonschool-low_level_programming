@@ -12,18 +12,18 @@
 
 int main(void)
 {
-	int ch = '0';
+	int ch;
 	int x = '0';
 
 	for (ch = '0'; ch <= '9'; ch++)
 	{
 		putchar(ch);
-		if (x <= 8)
+		if (x <= '8')
 		{
 			putchar(',');
 			putchar(' ');
-			(x++);
 		}
+		(x++);
 	}
 	putchar('\n');
 

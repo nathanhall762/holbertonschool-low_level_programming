@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* main - entry point
+* print_alphabet - prints alphabet
 *
 * _putchar - puts a char
 *
@@ -10,7 +10,8 @@
 void print_alphabet(void)
 {
 	char c = 'a';
-	for (; c <='z'; c++)
+
+	for (; c <= i'z'; c++)
 		_putchar(c);
 
 	_putchar('\n');

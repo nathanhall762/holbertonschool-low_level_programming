@@ -11,7 +11,7 @@ void more_numbers(void)
 	int c;
 	int lines;
 
-	for (lines = 0; lines <= 10; lines++)
+	for (lines = 0; lines < 10; lines++)
 	{
 		for (c = 0; c <= 14; c++)
 		{

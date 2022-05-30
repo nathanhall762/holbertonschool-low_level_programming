@@ -2,6 +2,7 @@
 
 /**
 * _isdigit - finds if int c is digit
+* @c: variable
 *
 * Return: 1 if c is digit, 0 if else
 */

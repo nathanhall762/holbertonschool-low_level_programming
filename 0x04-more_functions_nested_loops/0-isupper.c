@@ -2,6 +2,7 @@
 
 /**
 * _isupper - finds if int c is upper case or not
+* @c: variable
 *
 * Return: 1 if upper, 0 if else
 */

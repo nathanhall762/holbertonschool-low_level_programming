@@ -12,7 +12,8 @@ void puts2(char *str)
 	for (len = 0; str[len] != '\0'; len++)
 	{
 		_putchar(str[len]);
-		len++;
+		if (str[len] != '\0')
+			len++;
 	}
 	_putchar('\n');
 }

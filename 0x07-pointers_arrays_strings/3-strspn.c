@@ -5,13 +5,14 @@
 * @s: first string
 * @accept: second string
 *
-* Return: number of bytes 
+* Return: number of bytes
 */
 
 unsigned int _strspn(char *s, char *accept)
 {
 	int i, j, n;
 
+	n = 0;
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		j = 0;
@@ -19,8 +20,6 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 				n++;
-			else
-				break;
 			j++;
 		}
 	}

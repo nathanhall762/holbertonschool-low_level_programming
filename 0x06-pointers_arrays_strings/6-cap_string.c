@@ -21,7 +21,7 @@ char *cap_string(char *str)
 		cap = 0;
 		for (sepx = 0; sepx < 12; sepx++)
 		{
-			if (str[sepx] == separators[sepx])
+			if (str[i] == separators[sepx])
 				{
 					cap = 32;
 					sepx = 12;

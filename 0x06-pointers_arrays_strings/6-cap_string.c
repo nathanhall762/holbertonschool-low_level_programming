@@ -19,7 +19,8 @@ char *cap_string(char *str)
 			str[i] = str[i] - cap;
 		}
 		cap = 0;
-		for (sepx = 0; sepx < 12; sepx++)
+		sepx = 0;
+		for (; sepx < 12; sepx++)
 		{
 			if (str[i] == separators[sepx])
 				{

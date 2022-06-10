@@ -1,5 +1,5 @@
 #include "main.h"
-int squareroot(int n, int i);
+
 /**
 * _sqrt_recursion - sends n to squareroot function recursively
 * @n: integer

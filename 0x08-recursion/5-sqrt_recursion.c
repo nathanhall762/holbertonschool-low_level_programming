@@ -19,7 +19,7 @@ int _sqrt_recursion(int n)
 * @i: integer
 * Return: integer
 */
-int squareroot(int n, int i)
+int squareroot(int n, long i)
 {
 	if (i < 1)
 		return (-1);

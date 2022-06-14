@@ -10,13 +10,22 @@
 * Return: integer
 */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int i = 0;
+	int i, result;
 
-	if (argc >= 0)
+	if (argc > 0)
 	{
-		printf("%s\n", argv[i]);
+		for (i = 1; i < argc; i++)
+		{
+			if (argv[i] >= '0' & argv[i] <= '9')
+			result += atoi(argv[i]);
+		}
+		printf("%d\n", result);
+	}
+	else
+	{
+		printf("0\n");
 	}
 	return (0);
 }

@@ -10,13 +10,15 @@
 * Return: integer
 */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int i = 0;
+	int a = atoi(argv[1]);
+	int b = atoi(argv[2]);
+	int result = a * b;
 
 	if (argc >= 0)
 	{
-		printf("%s\n", argv[i]);
+		printf("%d\n", result);
 	}
 	return (0);
 }

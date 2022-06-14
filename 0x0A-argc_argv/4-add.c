@@ -7,7 +7,7 @@
 * @argc: cmd line argmt count
 * @argv: cmd line argmt strngs
 *
-* Return: integer
+* Return: 1 if cmd line arg not #, else 0
 */
 
 int main(int argc, char *argv[])
@@ -18,8 +18,15 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (argv[i] >= '0' & argv[i] <= '9')
-			result += atoi(argv[i]);
+			if (*argv[i] >= '0' && *argv[i] <= '9')
+			{
+				result += atoi(argv[i]);
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 		printf("%d\n", result);
 	}

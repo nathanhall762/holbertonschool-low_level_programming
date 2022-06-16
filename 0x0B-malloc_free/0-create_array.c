@@ -4,6 +4,10 @@
 
 /**
 * create_array - creates an array of chars
+* @size: size of array
+* @c: character
+*
+* Return: NULL if array write fails or size is 0, else array
 */
 
 char *create_array(unsigned int size, char c)

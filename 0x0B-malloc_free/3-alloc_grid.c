@@ -10,6 +10,7 @@
 
 int **alloc_grid (int width, int height)
 {
+	char *array = 0;
 /*
 * if width or height is <= 0, return NULL
 */
@@ -26,8 +27,9 @@ int **alloc_grid (int width, int height)
 /*
 * the function should return NULL on failure
 */
-	if (2darray == 0)
+	if (array == 0)
 	{
 		return (NULL);
 	}
+	return (0);
 }

@@ -14,19 +14,36 @@ char *_strdup(char *str)
 	char *array;
 	int i, last;
 
+/*
+* Returns NULL if str = NULL.
+*/
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+
+/*
+* Count length of string.
+*/
 	for (last = 0; last <= *str; last++)
 	{
 	}
-	last += 1;
+/*
+* Allocate memory space for array and init array.
+*/
 	array = malloc(sizeof(char) * last);
+
+/*
+* Copy str into array.
+*/
 	for (i = 0; i < last; i++)
 	{
 		array[i] = str[i];
 	}
+
+/*
+* Returns NULL if insufficient memory was available.
+*/
 	if (array == NULL)
 	{
 		return (NULL);

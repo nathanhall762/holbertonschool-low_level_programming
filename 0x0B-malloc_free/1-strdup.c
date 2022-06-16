@@ -12,8 +12,7 @@
 char *_strdup(char *str)
 {
 	char *array;
-	unsigned int i;
-	int last;
+	int i, last;
 
 /*
 * Returns NULL if str = NULL.
@@ -37,7 +36,7 @@ char *_strdup(char *str)
 /*
 * Copy str into array.
 */
-	for (i = 0; (int)i < last; i++)
+	for (i = 0; i < last; i++)
 	{
 		array[i] = str[i];
 	}

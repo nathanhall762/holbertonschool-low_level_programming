@@ -31,7 +31,7 @@ char *_strdup(char *str)
 /*
 * Allocate memory space for array and init array.
 */
-	array = malloc(sizeof(char) * last);
+	array = malloc(last + 1);
 
 /*
 * Copy str into array.

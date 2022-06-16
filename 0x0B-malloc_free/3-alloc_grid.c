@@ -6,9 +6,11 @@
 * alloc_grid - returns a pointer to a 2 dim array of ints
 * @width: width of 2d array
 * @height: height of 2d array
+*
+* Return: pointer to 2d array of ints
 */
 
-int **alloc_grid (int width, int height)
+int **alloc_grid(int width, int height)
 {
 	char *array = 0;
 /*
@@ -20,7 +22,7 @@ int **alloc_grid (int width, int height)
 	}
 
 /*
-* 
+*
 */
 
 

@@ -14,35 +14,27 @@
 
 char *str_concat(char *s1, char *s2)
 {
-/*
-* Declare variables.
-*/
-	char *s;
-	int len;
-	unsigned int i, j;
+	int i = 0;
+	char *a;
 
-/*
-* Get string length of s1 + s2.
-*/
-	len = strlen(s1) + strlen(s2);
-/*
-* Allocate new space for array of size s1 + s2 with null char.
-*/
-	s = malloc(len);
-
-/*
-* Copy str1 and str 2 into s.
-*/
-	for (i = 0; i < strlen(s1); i++)
-	{
-		s[i] = s1[i];
-	}
-	for (j = 0; j <= strlen(s2); j++)
-	{
-		s[i] = s2[j];
-		i++;
-	}
-	if (s == NULL)
+	if (s1 == NULL)
+		s1 = " ";
+	if (s2 == NULL)
+		s2 = " ";
+	a = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+	if (a == NULL)
 		return (NULL);
-	return (s);
+	while (*s1)
+	{
+		a[i] = *s1;
+		i++;
+		s1++;
+	}
+	while (*s2)
+	{
+		a[i] = *s2;
+		i++;
+		s2++;
+	}
+	return (a);
 }

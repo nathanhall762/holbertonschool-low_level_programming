@@ -12,26 +12,30 @@
 
 int **alloc_grid(int width, int height)
 {
-	char *array = 0;
-/*
-* if width or height is <= 0, return NULL
-*/
-	if (width <= 0 || height <= 0)
+	int **grid;
+	int i;
+
+	if (width < 0 || height < 0)
 	{
 		return (NULL);
 	}
 
-/*
-*
-*/
-
-
-/*
-* the function should return NULL on failure
-*/
-	if (array == 0)
-	{
+	grid = malloc(height * sizeof(int));
+	if (grid == NULL)
 		return (NULL);
+	for (i = 0; i < height; i++)
+	{
+		grid[i] = malloc(width * sizeof(int));
+		if (grid[i] == NULL)
+		{
+			for (i = i; i >= 0; i--)
+			{
+				free(grid[i]);
+			}
+
+			free(grid);
+			return (NULL);
+		}
 	}
-	return (0);
+	return (grid);
 }

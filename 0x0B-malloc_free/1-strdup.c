@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
 * _strdup - returns a pointer to a new memory space with string parameter
@@ -12,7 +13,7 @@
 char *_strdup(char *str)
 {
 	char *array;
-	int i, last;
+	int i = 0, len;
 
 /*
 * Returns NULL if str = NULL.
@@ -25,29 +26,25 @@ char *_strdup(char *str)
 /*
 * Count length of string.
 */
-	for (last = 0; last <= *str; last++)
-	{
-	}
+	len = strlen(str);
 /*
 * Allocate memory space for array and init array.
 */
-	array = malloc(last + 1);
+	array = malloc(len * sizeof(char) + 1);
+	if (array == NULL)
+		return (NULL);
 
 /*
 * Copy str into array.
 */
-	for (i = 0; i < last; i++)
+	while (i < len)
 	{
 		array[i] = str[i];
+		i++;
 	}
 
 /*
 * Returns NULL if insufficient memory was available.
 */
-	if (array == NULL)
-	{
-		return (NULL);
-	}
-
 	return (array);
 }

@@ -3,7 +3,11 @@
 #include <stdlib.h>
 
 /**
+* main - entry point
+* @argc: number of args
+* @argv: arg string
 *
+* Return: 0
 */
 
 int main(int argc, char *argv[])
@@ -15,15 +19,5 @@ int main(int argc, char *argv[])
 	}
 	(*get_op_func)(argv[3]);
 
-/*
-	if
-	{
-		
-	}
-	if
-	{
-		
-	}
-*/
 	return (0);
 }

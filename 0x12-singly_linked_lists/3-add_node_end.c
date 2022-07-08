@@ -12,13 +12,8 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	int i;
-	list_t *new = *head;
-
-	if (head == NULL)
-		return (NULL);
-
-	while (**head->next != NULL)
-		new = new->next;
+	list_t *new;
+	list_t *temp = *head;
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
@@ -26,10 +21,25 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 
-	new->len = i + 1;
 	new->str = strdup(str);
-	new->next = *head;
-	*head = new;
+	new->len = i;
+	new->next = NULL;
+
+	if (*head == NULL)
+	{
+		*head = new;
+		return (new);
+	}
+
+/*
+*to add node in middle of linked list:
+*change temp->next to temp->str and
+*NULL to whatever the str in the node before insertion point is
+*/
+	while (temp->next != NULL)
+		temp = temp->next;
+
+	temp->next = new;
 
 	return (new);
 }

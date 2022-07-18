@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h>
 
-/*
+/**
 * create_file - creates a file
 * @filename: name of the file to created
 * @text_content: NULL terminated string to write to the file
@@ -30,5 +30,5 @@ int create_file(const char *filename, char *text_content)
 	write(fd, buf, i);
 
 	close(fd);
-	return (0);
+	return (1);
 }

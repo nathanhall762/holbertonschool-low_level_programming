@@ -9,5 +9,7 @@
 
 size_t print_dlistint_backward(const dlistint_t *h)
 {
-    
+	(void) h;
+
+	return (EXIT_FAILURE);
 }
